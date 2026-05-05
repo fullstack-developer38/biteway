@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Biteway Delivery</title>
+<meta name="description" content="A food delivery platform: customer app, restaurant panel, rider app and admin console sharing one live order.">
+<meta property="og:title" content="Biteway: food delivery platform">
+<meta property="og:description" content="A food delivery platform: customer app, restaurant panel, rider app and admin console sharing one live order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="band" id="top">
+  <div class="wrap">
+    <nav class="topnav" aria-label="Page">
+      <div class="brand"><span class="mark" aria-hidden="true">b</span><b>Biteway</b></div>
+      <div class="navlinks"><button data-a="goto" data-v="apps">Try the apps</button><button data-a="goto" data-v="plan">Build plan</button><button data-a="goto" data-v="stack">Tech stack</button></div>
+      <button class="btn onband sm" data-a="reset">Start over</button>
+    </nav>
+    <div class="hero">
+      <div>
+        <span class="eyebrow">Food delivery for your city</span>
+        <h1>Every order, from first tap to <em>front door.</em></h1>
+        <p class="lead">A customer app, restaurant panel, rider app and admin console that share one live order. Watch an order make the whole trip, or click through each app yourself.</p>
+        <div class="ctas">
+          <button class="btn accent lg" data-a="play"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.8v12.4L18.5 12z" fill="currentColor"/></svg>Watch a full order<span class="meta">40 sec</span></button>
+          <button class="btn onband lg" data-a="goto" data-v="apps">Try it yourself</button>
+        </div>
+      </div>
+      <div class="ticket" role="group" aria-label="What the build includes">
+        <div class="tk-head"><span>Build order</span><span>Delivery platform</span></div>
+        <div class="tk-sec">
+          <div class="tk-row"><span>1×</span><b>Customer app</b><span>Android · iOS · Web</span></div>
+          <div class="tk-row"><span>1×</span><b>Restaurant panel</b><span>Web · Tablet</span></div>
+          <div class="tk-row"><span>1×</span><b>Rider app</b><span>Android · iOS</span></div>
+          <div class="tk-row"><span>1×</span><b>Admin console</b><span>Web</span></div>
+        </div>
+        <div class="tk-sec">
+          <div class="tk-row"><span>+</span><b>Payments</b><span>Cash · Card · Wallets</span></div>
+          <div class="tk-row"><span>+</span><b>Updates</b><span>Push · SMS · Email</span></div>
+          <div class="tk-row"><span>+</span><b>Promo codes</b><span>Set by admin</span></div>
+          <div class="tk-row"><span>+</span><b>Onboarding</b><span>Every user type</span></div>
+        </div>
+        <div class="tk-sec tk-foot"><span>Included</span><span>Deploy scripts, docs, launch support</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="apps" aria-label="The four apps">
+  <div class="wrap">
+    <div id="apps" class="apps-anchor"><div class="stations" id="tabs" role="tablist" aria-label="Choose an app"></div></div>
+    <div class="guide" id="guide" role="status" aria-live="polite"></div>
+    <div class="layout">
+      <main id="stage"></main>
+      <aside id="aside" aria-label="Live order and messages"></aside>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="plan" aria-labelledby="plan-h">
+  <div class="wrap plan-grid">
+    <div class="sec-title"><span class="eyebrow">Build plan</span><h2 id="plan-h">Five steps from scope to the app stores</h2><p>Every step ends with something that runs on a real phone, so nothing is a surprise at launch.</p></div>
+    <ol class="psteps">
+      <li class="pstep"><span class="pnum">01</span><div><h3>Scope</h3><p>Lock the feature list, the local wallets, delivery zones, fees and commission rules.</p><span class="pout"><b>Output</b>a fixed feature list</span></div></li>
+      <li class="pstep"><span class="pnum">02</span><div><h3>Design</h3><p>Figma screens for all four apps, clickable before any code is written.</p><span class="pout"><b>Output</b>clickable designs</span></div></li>
+      <li class="pstep"><span class="pnum">03</span><div><h3>Build</h3><p>One Node.js API, Flutter apps for customers and riders, and React for the website and both dashboards.</p><span class="pout"><b>Output</b>a test build every week</span></div></li>
+      <li class="pstep"><span class="pnum">04</span><div><h3>Payments and live features</h3><p>Card and wallet gateways, cash reconciliation, live rider tracking, push notifications, SMS and email.</p><span class="pout"><b>Output</b>test orders, end to end</span></div></li>
+      <li class="pstep"><span class="pnum">05</span><div><h3>Launch</h3><p>Testing with real restaurants, Play Store and App Store release, deploy scripts and documentation, then a period of fixes and small changes.</p><span class="pout"><b>Output</b>store releases and docs</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section stackband" id="stack" aria-labelledby="stack-h">
+  <div class="wrap">
+    <div class="sec-title"><span class="eyebrow">Tech stack</span><h2 id="stack-h">Fast, secure and easy to maintain</h2><p>Common, well-supported tools that are easy to pick up and maintain.</p></div>
+    <div class="stack-grid">
+      <div class="stack-cell"><span class="lbl">Mobile apps</span><h3>Flutter</h3><p>One codebase for the Android and iOS customer and rider apps.</p></div>
+      <div class="stack-cell"><span class="lbl">Website and dashboards</span><h3>React</h3><p>The customer website, the restaurant panel and the admin console.</p></div>
+      <div class="stack-cell"><span class="lbl">Backend</span><h3>Node.js + PostgreSQL</h3><p>One API and one database for orders, payments, users and roles.</p></div>
+      <div class="stack-cell"><span class="lbl">Live updates</span><h3>WebSockets + Google Maps</h3><p>Rider location, ETAs and order status update in real time.</p></div>
+      <div class="stack-cell"><span class="lbl">Messages</span><h3>Firebase, SMS, email</h3><p>Push notifications at every step, receipts by SMS and email.</p></div>
+      <div class="stack-cell"><span class="lbl">Hosting</span><h3>AWS</h3><p>Deploy scripts and autoscaling for the lunch and dinner rush.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fb"><span class="mark xs" aria-hidden="true">b</span><span>Biteway is a placeholder name. Every restaurant, person and number here is sample data.</span></div>
+    <button class="linkbtn" data-a="goto" data-v="top">Back to top</button>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
