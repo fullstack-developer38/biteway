@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Biteway Toy Town</title>
+<meta name="description" content="Biteway in cartoon style: a 3D toy town, an animated short film and four working delivery apps.">
+<meta property="og:title" content="Biteway Toy Town">
+<meta property="og:description" content="Biteway in cartoon style: a 3D toy town, an animated short film and four working delivery apps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,400..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500..900&display=swap">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="css/cartoon.css">
+</head>
+<body>
+
+<header class="hero-wrap" id="top">
+  <div class="sky" aria-hidden="true"><span class="stars"></span><span class="sunmoon"></span><span class="cl c1"></span><span class="cl c2"></span><span class="cl c3"></span></div>
+  <div class="wrap">
+    <nav class="topnav" aria-label="Page">
+      <div class="brand"><span class="bm" id="brandMascot"></span><b>Biteway</b></div>
+      <div class="navlinks"><button data-a="goto" data-v="film">Cartoon</button><button data-a="goto" data-v="apps">Try the apps</button><button data-a="goto" data-v="plan">Plan</button><button data-a="goto" data-v="stack">Tech</button></div>
+      <button class="btn ghost sm" data-a="reset">Start over</button>
+    </nav>
+    <div class="hero">
+      <div class="hero-copy">
+        <span class="sticker">Food delivery for your city</span>
+        <h1>Every order, from tap to <em>tummy!</em></h1>
+        <p class="lead">Customers tap, kitchens sizzle, riders zoom, and the boss sees it all. Four apps, one happy order. Watch the cartoon, or try every app yourself.</p>
+        <div class="ctas">
+          <button class="btn accent lg" data-a="play"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.8v12.4L18.5 12z" fill="currentColor"/></svg>Watch a full order<span class="meta">40 sec</span></button>
+          <button class="btn ghost lg" data-a="watchFilm">Watch the cartoon</button>
+        </div>
+        <ul class="hchips" aria-label="What is included"><li>4 apps</li><li>Cash, card, wallets</li><li>Live map tracking</li><li>Push, SMS, email</li><li>Promo codes</li></ul>
+      </div>
+      <div class="stage3d">
+        <div class="scene3d" id="scene3d" role="img" aria-label="A 3D toy town on a floating island, where a delivery rider drives around the ring road"></div>
+        <span class="tap-hint">Tap the town to make the rider jump!</span>
+      </div>
+    </div>
+  </div>
+  <svg class="hills" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true"><path class="h1" vector-effect="non-scaling-stroke" d="M-10 64C200 8 380 8 560 54S900 112 1100 46S1340 18 1450 56V120H-10Z"/><path class="h2" vector-effect="non-scaling-stroke" d="M-10 96C240 58 480 58 720 90S1200 122 1450 80V120H-10Z"/></svg>
+</header>
+
+<section class="section filmsec" id="film" aria-labelledby="film-h">
+  <div class="wrap">
+    <div class="sec-title center"><span class="sticker pink">The cartoon</span><h2 id="film-h">Tap, sizzle, zoom, yum!</h2><p>How one order travels through the four apps, in about 20 seconds.</p></div>
+    <div class="film" id="filmbox">
+      <div class="strip" aria-hidden="true"></div>
+      <div class="frame"><div id="scenes"></div><div class="grain" aria-hidden="true"></div><div class="vignette" aria-hidden="true"></div><div class="iris" id="iris" aria-hidden="true"></div><div class="cap" id="cap" aria-live="polite"></div></div>
+      <div class="strip" aria-hidden="true"></div>
+      <div class="fctl" id="fctl"></div>
+    </div>
+  </div>
+</section>
+
+<section class="apps-sec" aria-labelledby="apps-h">
+  <div class="wrap">
+    <div id="apps" class="apps-anchor sec-title"><span class="sticker">Try it</span><h2 id="apps-h">Try all four apps</h2><p>They share one live order. Do something in one app and watch the others react.</p></div>
+    <div class="stations" id="tabs" role="tablist" aria-label="Choose an app"></div>
+    <div class="guide-row"><div class="g-mascot" id="gmascot" aria-hidden="true"></div><div class="bubble" id="guide" role="status" aria-live="polite"></div></div>
+    <div class="layout">
+      <main id="stage"></main>
+      <aside id="aside" aria-label="Live order and messages"></aside>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="plan" aria-labelledby="plan-h">
+  <div class="wrap">
+    <div class="sec-title"><span class="sticker pink">Build plan</span><h2 id="plan-h">Five stops from scope to the app stores</h2><p>Every step ends with something that runs on a real phone, so nothing is a surprise at launch.</p></div>
+    <div class="board">
+      <svg class="road-svg" viewBox="0 0 1000 80" preserveAspectRatio="none" aria-hidden="true"><path vector-effect="non-scaling-stroke" d="M36 40C140 0 200 80 300 40S460 0 500 40S660 80 700 40S860 0 964 40"/></svg>
+      <ol class="psteps">
+        <li class="pstep" style="--c:var(--pink)"><span class="ptoken">1</span><div class="pcardx"><h3>Scope</h3><p>Lock the feature list, local wallets, delivery zones, fees and commission rules.</p><span class="pout"><b>Output</b>a fixed feature list</span></div></li>
+        <li class="pstep" style="--c:var(--orange)"><span class="ptoken">2</span><div class="pcardx"><h3>Design</h3><p>Figma screens for all four apps, clickable before any code is written.</p><span class="pout"><b>Output</b>clickable designs</span></div></li>
+        <li class="pstep" style="--c:var(--accent)"><span class="ptoken">3</span><div class="pcardx"><h3>Build</h3><p>One Node.js API, Flutter apps for customers and riders, React for the website and dashboards.</p><span class="pout"><b>Output</b>a test build every week</span></div></li>
+        <li class="pstep" style="--c:var(--mint)"><span class="ptoken">4</span><div class="pcardx"><h3>Payments and live features</h3><p>Card and wallet gateways, cash tracking, live rider maps, push, SMS and email.</p><span class="pout"><b>Output</b>test orders, end to end</span></div></li>
+        <li class="pstep" style="--c:var(--brand)"><span class="ptoken">5</span><div class="pcardx"><h3>Launch</h3><p>Testing with real restaurants, store release, deploy scripts and docs, then a period of fixes.</p><span class="pout"><b>Output</b>store releases and docs</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section stackband" id="stack" aria-labelledby="stack-h">
+  <div class="wrap">
+    <div class="sec-title"><span class="sticker">Tech stack</span><h2 id="stack-h">Fast, secure and easy to maintain</h2><p>Common, well-supported tools that are easy to pick up and maintain.</p></div>
+    <div class="stack-grid" style="margin-top:32px">
+      <div class="stack-cell" style="--c:var(--pink-soft)"><span class="sic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span><span class="lbl">Mobile apps</span><h3>Flutter</h3><p>One codebase for the Android and iOS customer and rider apps.</p></div>
+      <div class="stack-cell" style="--c:var(--sky-soft)"><span class="sic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg></span><span class="lbl">Website and dashboards</span><h3>React</h3><p>The customer website, the restaurant panel and the admin console.</p></div>
+      <div class="stack-cell" style="--c:var(--mint-soft)"><span class="sic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v13c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-13M4.5 12c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8"/></svg></span><span class="lbl">Backend</span><h3>Node.js + PostgreSQL</h3><p>One API and one database for orders, payments, users and roles.</p></div>
+      <div class="stack-cell" style="--c:var(--orange-soft)"><span class="sic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11.5a6.5 6.5 0 0113 0C18.5 15 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg></span><span class="lbl">Live updates</span><h3>WebSockets + Maps</h3><p>Rider location, ETAs and order status update in real time.</p></div>
+      <div class="stack-cell" style="--c:var(--accent-soft)"><span class="sic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9a6 6 0 0112 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9z"/><path d="M10 19.5a2.2 2.2 0 004 0"/></svg></span><span class="lbl">Messages</span><h3>Firebase, SMS, email</h3><p>Push notifications at every step, receipts by SMS and email.</p></div>
+      <div class="stack-cell" style="--c:var(--brand-soft)"><span class="sic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18.5a4.5 4.5 0 01-.6-9A6 6 0 0118 8.4a4.6 4.6 0 01-.5 10.1z"/></svg></span><span class="lbl">Hosting</span><h3>AWS</h3><p>Deploy scripts and autoscaling for the lunch and dinner rush.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fb"><span class="fm" id="footMascot" aria-hidden="true"></span><span>Biteway is a placeholder name. Every restaurant, person and number here is sample data.</span></div>
+    <button class="linkbtn" data-a="goto" data-v="top">Back to top</button>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
